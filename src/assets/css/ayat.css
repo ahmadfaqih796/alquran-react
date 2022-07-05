@@ -9,9 +9,14 @@
   justify-content: space-around;
   width: 1000px;
 }
-.ayat-card ul {
+.ayat-card article {
   display: flex;
+  align-items: baseline;
 }
-.ayat-card ul li {
-  list-style: none;
+.ayat-card article .number {
+  width: 100px;
+}
+.ayat-card article section {
+  width: 100%;
+  color: black;
 }

@@ -1,5 +1,4 @@
 import { RouterProvider } from "react-router-dom";
-import "./App.css";
 import "./assets/css/skeleton.css";
 import "./assets/css/root.css";
 import "./assets/css/surah.css";

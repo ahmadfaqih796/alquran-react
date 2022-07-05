@@ -1,10 +1,27 @@
 * {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   overflow-x: hidden;
+}
+
+.template {
+  background-image: url("../image/template.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
+
+.gambar {
+  padding: 10px;
+  border: 2px solid black;
+  margin: 1rem;
 }
 
 hr {

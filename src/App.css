@@ -8,16 +8,3 @@
 p {
   color: darkgoldenrod;
 }
-.gambar {
-  padding: 10px;
-  border: 2px solid black;
-  margin: 1rem;
-}
-.template {
-  background-image: url(./assets/image/template.jpg);
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  object-fit: cover;
-  background-repeat: no-repeat;
-}
