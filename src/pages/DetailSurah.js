@@ -24,19 +24,19 @@ const DetailSurah = () => {
           <p>{surah.tafsir.id}</p>
           <div className="ayat-card">
             {ayats.map((ayat, index) => (
-              <ul key={index}>
+              <article key={index}>
                 <hr />
-                <li>{ayat.number.inSurah}</li>
-                <article>
-                  <li className="arab">{ayat.text.arab}</li>
-                  <li>{ayat.translation.id}</li>
-                </article>
+                <h2 className="number">{ayat.number.inSurah}</h2>
+                <section>
+                  <p className="arab">{ayat.text.arab}</p>
+                  <p>{ayat.translation.id}</p>
+                </section>
                 {/* <li>
                 <audio controls>
                   <source src={ayat.audio.secondary[0]} type="audio/mpeg" />
                 </audio>
               </li> */}
-              </ul>
+              </article>
             ))}
           </div>
         </>

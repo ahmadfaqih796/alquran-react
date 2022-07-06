@@ -55,25 +55,7 @@
   align-items: center;
   justify-content: space-around;
 }
-.surah article .number {
-  position: relative;
-  z-index: 1000;
-  text-align: center;
-}
-.surah article .number::after {
-  background-image: url("../image/ayat.png");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  display: block;
-  position: absolute;
-  width: 55px;
-  height: 70px;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-  z-index: -1;
-  content: "";
-}
+
 .surah article section {
   width: 200px;
 }

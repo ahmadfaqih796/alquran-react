@@ -52,6 +52,25 @@ hr {
   box-shadow: 10px 15px 15px -5px rgba(155, 149, 149, 0.76);
 }
 
+.number {
+  position: relative;
+  z-index: 1000;
+  text-align: center;
+}
+.number::after {
+  background-image: url("../image/ayat.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: block;
+  position: absolute;
+  width: 55px;
+  height: 70px;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  content: "";
+}
 @font-face {
   font-family: me_quran;
   src: url("../font/me_quran.ttf");
