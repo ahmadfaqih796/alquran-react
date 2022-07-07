@@ -27,8 +27,10 @@ const DetailSurah = () => {
               <ul key={index}>
                 <hr />
                 <li>{ayat.number.inSurah}</li>
-                <li className="arab">{ayat.text.arab}</li>
-                <li>{ayat.translation.id}</li>
+                <article>
+                  <li className="arab">{ayat.text.arab}</li>
+                  <li>{ayat.translation.id}</li>
+                </article>
                 {/* <li>
                 <audio controls>
                   <source src={ayat.audio.secondary[0]} type="audio/mpeg" />
