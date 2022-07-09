@@ -67,8 +67,7 @@ hr {
   font-family: me_quran;
   src: url("../font/me_quran.ttf");
 }
-.aaa {
-  display: flex;
-  flex-direction: column;
-  width: 100vw;
+@font-face {
+  font-family: KaushanScript;
+  src: url("../font/KaushanScript.otf");
 }

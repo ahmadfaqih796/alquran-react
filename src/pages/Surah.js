@@ -45,8 +45,8 @@ const Surah = () => {
   return (
     <>
       {surah.length === 0 ? (
-        <section class="template loading section-2">
-          <span class="loader loader-double"></span>
+        <section className="template loading section-2">
+          <span className="loader loader-double"></span>
           Loading...
         </section>
       ) : (
@@ -64,7 +64,7 @@ const Surah = () => {
                 onKeyPress={handleKeyPress}
               />
               <button onClick={FindSurah}>
-                <i class="fa-solid fa-magnifying-glass"></i>
+                <i className="fa-solid fa-magnifying-glass"></i>
               </button>
             </main>
             <p>{error ? message : ""}</p>
