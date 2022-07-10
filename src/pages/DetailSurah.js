@@ -25,6 +25,7 @@ const DetailSurah = () => {
           <div className="ayat-card">
             {ayats.map((ayat, index) => (
               <ul key={index}>
+                <hr />
                 <li>{ayat.number.inSurah}</li>
                 <li className="arab">{ayat.text.arab}</li>
                 <li>{ayat.translation.id}</li>
