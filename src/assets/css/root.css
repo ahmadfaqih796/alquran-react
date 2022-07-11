@@ -17,13 +17,21 @@
   display: flex;
 }
 
-.card {
+.error-page {
   display: flex;
-  background-color: greenyellow;
-  width: 300px;
-  margin: 10px;
-  padding: 0.7rem;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
   flex-direction: column;
+  align-items: center;
+}
+.card {
+  display: block;
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 10px 15px 15px -5px rgba(155, 149, 149, 0.76);
 }
 
 @font-face {
