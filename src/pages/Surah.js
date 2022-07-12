@@ -37,40 +37,49 @@ const Surah = () => {
   };
 
   return (
-    <div className="template">
-      <article className="brand">
-        <h1>Al-Quran Al-Faqih</h1>
-        <img className="quran" src={quran} />
-        <main className="pencarian">
-          <input
-            type="text"
-            autoFocus
-            onChange={(e) => {
-              setSearch(e.target.value);
-            }}
-            onKeyPress={handleKeyPress}
-          />
-          <button onClick={FindSurah}>Cari</button>
-        </main>
-      </article>
-      <main className="surah">
-        {surah.map((data, index) => (
-          <a
-            href={"/" + data.name.transliteration.id + "/" + data.number}
-            key={index}
-          >
-            <article>
-              <h2 className="number">{data.number}</h2>
-              <section>
-                <h1>{data.name.short}</h1>
-                <h1>{data.name.transliteration.id}</h1>
-                <p>{data.name.translation.id}</p>
-              </section>
-            </article>
-          </a>
-        ))}
-      </main>
-    </div>
+    <>
+      {surah.length === 0 ? (
+        <section class="template loading section-2">
+          <span class="loader loader-double"></span>
+          Loading...
+        </section>
+      ) : (
+        <div className="template">
+          <article className="brand">
+            <h1>Al-Quran Al-Faqih</h1>
+            <img className="quran" src={quran} />
+            <main className="pencarian">
+              <input
+                type="text"
+                autoFocus
+                onChange={(e) => {
+                  setSearch(e.target.value);
+                }}
+                onKeyPress={handleKeyPress}
+              />
+              <button onClick={FindSurah}>Cari</button>
+            </main>
+          </article>
+          <main className="surah">
+            {surah.map((data, index) => (
+              <a
+                href={"/" + data.name.transliteration.id + "/" + data.number}
+                key={index}
+              >
+                <article>
+                  <h2 className="number">{data.number}</h2>
+                  <section>
+                    <h1>{data.name.short}</h1>
+                    <h1>{data.name.transliteration.id}</h1>
+                    <p>{data.name.translation.id}</p>
+                  </section>
+                </article>
+              </a>
+            ))}
+          </main>
+        </div>
+      )}
+    </>
   );
 };
 export default Surah;

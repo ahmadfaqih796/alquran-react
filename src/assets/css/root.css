@@ -14,7 +14,7 @@
 }
 
 .tampilan {
-	display: flex;
+  display: flex;
 }
 
 .card {
@@ -31,7 +31,7 @@
   src: url("../font/me_quran.ttf");
 }
 .aaa {
-	display: flex;
-	flex-direction: column;
-	width: 100vw;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
 }
