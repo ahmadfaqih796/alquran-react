@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { GetAllSurah } from "../providers/quran.provider";
+import quran from "../assets/image/quran.png";
 
 const Surah = () => {
   const [surah, setSurah] = useState([]);
@@ -37,17 +38,21 @@ const Surah = () => {
 
   return (
     <div className="template">
-      <main className="pencarian">
-        <input
-          type="text"
-          autoFocus
-          onChange={(e) => {
-            setSearch(e.target.value);
-          }}
-          onKeyPress={handleKeyPress}
-        />
-        <button onClick={FindSurah}>Cari</button>
-      </main>
+      <article className="brand">
+        <h1>Al-Quran Al-Faqih</h1>
+        <img className="quran" src={quran} />
+        <main className="pencarian">
+          <input
+            type="text"
+            autoFocus
+            onChange={(e) => {
+              setSearch(e.target.value);
+            }}
+            onKeyPress={handleKeyPress}
+          />
+          <button onClick={FindSurah}>Cari</button>
+        </main>
+      </article>
       <main className="surah">
         {surah.map((data, index) => (
           <a

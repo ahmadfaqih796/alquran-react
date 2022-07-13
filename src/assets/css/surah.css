@@ -1,20 +1,33 @@
-.pencarian {
+.brand {
   position: fixed;
-  width: 200px;
-  right: 0;
+  width: 250px;
+  right: 3%;
   top: 50%;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, -50%);
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.brand h1 {
+  text-align: center;
+}
+.brand .quran {
+  width: 100%;
+  margin-bottom: -30px;
+}
+.pencarian {
+  display: flex;
+  justify-content: space-around;
 }
 .pencarian input {
   padding: 10px;
-  width: 150px;
   border-radius: 15px;
+  width: 100%;
 }
 .pencarian button {
-  width: 40px;
+  width: 50px;
   border-radius: 15px;
+  margin-left: 10px;
   background-color: green;
   color: white;
 }
@@ -23,7 +36,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  max-width: 1000px;
+  width: 1000px;
 }
 .surah a {
   text-decoration: none;
@@ -33,7 +46,7 @@
   width: 300px;
   background-color: white;
   border-radius: 20px;
-  box-shadow: 10px 15px 15px -5px rgba(155,149,149,0.76);
+  box-shadow: 10px 15px 15px -5px rgba(155, 149, 149, 0.76);
   margin: 10px;
   padding: 20px 10px;
   display: flex;
@@ -60,8 +73,23 @@
   content: "";
 }
 .surah article section {
-   width: 200px;
+  width: 200px;
 }
 .surah article section p {
-   font-size: 1rem;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 1500px) {
+  .brand {
+    position: relative;
+    right: 0;
+    top: 0;
+    transform: translate(0, 0);
+    margin: 0 auto;
+    padding: 10px 0;
+  }
+  .surah {
+    width: 90%;
+    margin: 0 auto;
+  }
 }
