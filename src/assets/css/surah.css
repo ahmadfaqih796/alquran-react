@@ -1,3 +1,24 @@
+.pencarian {
+  position: fixed;
+  width: 200px;
+  right: 0;
+  top: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  justify-content: space-between;
+}
+.pencarian input {
+  padding: 10px;
+  width: 150px;
+  border-radius: 15px;
+}
+.pencarian button {
+  width: 40px;
+  border-radius: 15px;
+  background-color: green;
+  color: white;
+}
+
 .surah {
   display: flex;
   flex-wrap: wrap;

@@ -12,7 +12,7 @@ const Surah = () => {
     });
   }, []);
 
-  function FindNext() {
+  function FindSurah() {
     if (search === "") {
       alert("Please enter some text to search!");
       return;
@@ -28,19 +28,25 @@ const Surah = () => {
       alert("Your browser does not support this example!");
     }
   }
+
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      FindSurah();
+    }
+  };
+
   return (
     <div className="template">
-      <main>
-      <input
-            type="text"
-            autoFocus
-            onChange={(e) => {
-              setSearch(e.target.value);
-            }}
-          />
-          <button onClick={FindNext}>
-            sasss
-          </button>
+      <main className="pencarian">
+        <input
+          type="text"
+          autoFocus
+          onChange={(e) => {
+            setSearch(e.target.value);
+          }}
+          onKeyPress={handleKeyPress}
+        />
+        <button onClick={FindSurah}>Cari</button>
       </main>
       <main className="surah">
         {surah.map((data, index) => (
