@@ -1,17 +1,18 @@
 .surah {
   display: flex;
   flex-wrap: wrap;
-  width: 90%;
+  justify-content: space-around;
+  max-width: 1000px;
 }
 .surah a {
   text-decoration: none;
   color: black;
 }
 .surah article {
-  min-width: 300px;
-  background-color: aliceblue;
+  width: 300px;
+  background-color: white;
   border-radius: 20px;
-  box-shadow: 0 0 0 0;
+  box-shadow: 10px 15px 15px -5px rgba(155,149,149,0.76);
   margin: 10px;
   padding: 20px 10px;
   display: flex;
@@ -38,6 +39,8 @@
   content: "";
 }
 .surah article section {
-   background-color: red;
    width: 200px;
+}
+.surah article section p {
+   font-size: 1rem;
 }

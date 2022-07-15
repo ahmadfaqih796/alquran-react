@@ -21,8 +21,9 @@ const Surah = () => {
             <article>
               <h2 className="number">{data.number}</h2>
               <section>
+                <h1>{data.name.short}</h1>
                 <h1>{data.name.transliteration.id}</h1>
-                <h2>{data.name.transliteration.id}</h2>
+                <p>{data.name.translation.id}</p>
               </section>
             </article>
           </a>
