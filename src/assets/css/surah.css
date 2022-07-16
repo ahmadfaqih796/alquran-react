@@ -4,7 +4,8 @@
   width: 90%;
 }
 .surah a {
-   text-decoration: none;
+  text-decoration: none;
+  color: black;
 }
 .surah article {
   min-width: 300px;
@@ -13,19 +14,30 @@
   box-shadow: 0 0 0 0;
   margin: 10px;
   padding: 20px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
-.surah article h2 {
-   position: relative;
-   z-index: 1000;
+.surah article .number {
+  position: relative;
+  z-index: 1000;
+  text-align: center;
 }
-.surah article h2::before {
+.surah article .number::after {
   background-image: url("../image/ayat.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   display: block;
-  
+  position: absolute;
   width: 55px;
   height: 70px;
-  z-index: 1;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  z-index: -1;
   content: "";
+}
+.surah article section {
+   background-color: red;
+   width: 200px;
 }

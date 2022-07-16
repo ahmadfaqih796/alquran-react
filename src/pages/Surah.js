@@ -19,11 +19,11 @@ const Surah = () => {
             key={index}
           >
             <article>
-              <h2>{data.number}</h2>
-              <td>
+              <h2 className="number">{data.number}</h2>
+              <section>
                 <h1>{data.name.transliteration.id}</h1>
-              </td>
-              <td>{data.name.transliteration.id}</td>
+                <h2>{data.name.transliteration.id}</h2>
+              </section>
             </article>
           </a>
         ))}
