@@ -1,0 +1,31 @@
+.surah {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+}
+.surah a {
+   text-decoration: none;
+}
+.surah article {
+  min-width: 300px;
+  background-color: aliceblue;
+  border-radius: 20px;
+  box-shadow: 0 0 0 0;
+  margin: 10px;
+  padding: 20px 10px;
+}
+.surah article h2 {
+   position: relative;
+   z-index: 1000;
+}
+.surah article h2::before {
+  background-image: url("../image/ayat.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: block;
+  
+  width: 55px;
+  height: 70px;
+  z-index: 1;
+  content: "";
+}

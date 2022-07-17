@@ -2,6 +2,7 @@
 import { RouterProvider } from "react-router-dom";
 import "./App.css";
 import "./assets/css/skeleton.css"
+import "./assets/css/surah.css"
 import { ROUTER } from "./router";
 function App() {
   

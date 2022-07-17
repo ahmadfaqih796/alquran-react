@@ -12,28 +12,22 @@ const Surah = () => {
   }, []);
   return (
     <div className="template">
-      <table>
-        <thead>
-          <tr>
-            <th>No</th>
-          </tr>
-        </thead>
-        <tbody>
-          {surah.map((data, index) => (
-            <tr key={index}>
-              <td>{data.number}</td>
+      <main className="surah">
+        {surah.map((data, index) => (
+          <a
+            href={"/" + data.name.transliteration.id + "/" + data.number}
+            key={index}
+          >
+            <article>
+              <h2>{data.number}</h2>
               <td>
-                <a
-                  href={"/" + data.name.transliteration.id + "/" + data.number}
-                >
-                  {data.name.transliteration.id}
-                </a>
+                <h1>{data.name.transliteration.id}</h1>
               </td>
               <td>{data.name.transliteration.id}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+            </article>
+          </a>
+        ))}
+      </main>
     </div>
   );
 };
