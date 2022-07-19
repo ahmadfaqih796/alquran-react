@@ -8,7 +8,7 @@ const DetailSurah = () => {
   const [ayats, setAyat] = useState([]);
   const [tafsir, setTafsir] = useState("");
   const params = useParams();
-  console.log(params);
+  console.log("xxxxxx",tafsir);
   useEffect(() => {
     GetDetailSurah(params.id).then((response) => {
       setSurah(response.data.data);
@@ -40,7 +40,7 @@ const DetailSurah = () => {
           ))}
         </>
       ) : (
-        <h1 className="skeleton">ssssssss</h1>
+        <h1 className="skeleton skeleton-text"></h1>
       )}
     </>
   );
