@@ -17,24 +17,31 @@ const DetailSurah = () => {
       console.log(response.data.data);
     });
   }, [params.id]);
+
   return (
     <>
-      <h1>detail</h1>
-      <h1>{surah.number}</h1>
-      <h1>{surah.numberOfVerses}</h1>
-      <p>{tafsir}</p>
-      {ayats.map((ayat, index) => (
-        <ul key={index}>
-          <li>{ayat.number.inSurah}</li>
-          <li className="arab">{ayat.text.arab}</li>
-          <li>{ayat.translation.id}</li>
-          <li>
-            <audio controls>
-              <source src={ayat.audio.secondary[0]} type="audio/mpeg" />
-            </audio>
-          </li>
-        </ul>
-      ))}
+      {ayats.length >= 1 ? (
+        <>
+          <h1>detail</h1>
+          <h1>{surah.number}</h1>
+          <h1>{surah.numberOfVerses}</h1>
+          <p>{tafsir}</p>
+          {ayats.map((ayat, index) => (
+            <ul key={index}>
+              <li>{ayat.number.inSurah}</li>
+              <li className="arab">{ayat.text.arab}</li>
+              <li>{ayat.translation.id}</li>
+              <li>
+                <audio controls>
+                  <source src={ayat.audio.secondary[0]} type="audio/mpeg" />
+                </audio>
+              </li>
+            </ul>
+          ))}
+        </>
+      ) : (
+        <h1 className="skeleton">ssssssss</h1>
+      )}
     </>
   );
 };
