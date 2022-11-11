@@ -1,33 +1,15 @@
-import { useEffect, useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import { GetAllSurah } from "./providers/quran.provider";
+import { DetailSurah } from "./pages/detail.page";
+import { Surah } from "./pages/surah.page";
 function App() {
-	const [surah, setSurah] = useState([]);
-
-	useEffect(() => {
-		GetAllSurah().then((response) => {
-			setSurah(response.data.data)
-			console.log(response.data.data)
-		})
-	}, []);
   return (
-    <>
-      <table>
-          <thead>
-            <tr>
-              <th>No</th>
-            </tr>
-          </thead>
-          <tbody>
-            {surah.map((data, index) => (
-              <tr key={index}>
-                <td>{data.number}</td>
-								<td>{data.name.transliteration.id}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<Surah />} />
+        <Route path="/:surah/:id" element={<DetailSurah />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 export default App;
