@@ -1,3 +1,4 @@
+import "../assets/css/root.css"
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { GetDetailSurah } from "../providers/quran.provider";
@@ -23,8 +24,8 @@ export const DetailSurah = () => {
       <p>{tafsir}</p>
       {ayats.map((ayat, index) => (
         <ul key={index}>
-          <li>{ayat.number.inQuran}</li>
-          <li>{ayat.text.arab}</li>
+          <li>{ayat.number.inSurah}</li>
+          <li className="arab">{ayat.text.arab}</li>
           <li>{ayat.translation.id}</li>
           <li>
             <audio controls>

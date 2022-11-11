@@ -1,0 +1,9 @@
+.arab {
+  font-family: me_quran;
+	font-size: 4rem;
+}
+
+@font-face {
+  font-family: me_quran;
+  src: url("../font/me_quran.ttf");
+}
