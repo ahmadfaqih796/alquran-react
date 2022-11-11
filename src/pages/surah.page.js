@@ -22,6 +22,11 @@ export const Surah = () => {
           {surah.map((data, index) => (
             <tr key={index}>
               <td>{data.number}</td>
+              <td>
+                <a href={"/" + data.name.transliteration.id + "/" + data.number}>
+                  {data.name.transliteration.id}
+                </a>
+              </td>
               <td>{data.name.transliteration.id}</td>
             </tr>
           ))}
