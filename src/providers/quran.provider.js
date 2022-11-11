@@ -9,3 +9,12 @@ export const GetAllSurah = () => {
       .catch((err) => reject(err));
   });
 };
+
+export const GetDetailSurah = (noSurah) => {
+  return new Promise((resolve, reject) => {
+    axios
+      .get(BASE_URL + `/surah/${noSurah}`)
+      .then((res) => resolve(res))
+      .catch((err) => reject(err));
+  });
+};
