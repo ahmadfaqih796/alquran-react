@@ -1,3 +1,4 @@
+import "../assets/css/navigasi.css"
 export const Navigasi = () => {
   return (
     <>

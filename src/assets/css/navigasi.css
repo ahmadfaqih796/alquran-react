@@ -3,5 +3,14 @@ nav {
 	width: 100vw;
 	height: 70px;
 	background-color: aqua;
-	
+}
+nav ul {
+	display: flex;
+	background-color: red;
+	width: 300px;
+	justify-content: space-around;
+	align-items: center;
+}
+nav ul li {
+	list-style: none;
 }
