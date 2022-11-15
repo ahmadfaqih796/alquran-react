@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Navigasi } from "../components/Navbar.component";
 import { GetAllSurah } from "../providers/quran.provider";
 
 export const Surah = () => {
@@ -12,6 +13,7 @@ export const Surah = () => {
   }, []);
   return (
     <>
+      <Navigasi />
       <table>
         <thead>
           <tr>
@@ -23,7 +25,9 @@ export const Surah = () => {
             <tr key={index}>
               <td>{data.number}</td>
               <td>
-                <a href={"/" + data.name.transliteration.id + "/" + data.number}>
+                <a
+                  href={"/" + data.name.transliteration.id + "/" + data.number}
+                >
                   {data.name.transliteration.id}
                 </a>
               </td>
