@@ -14,6 +14,20 @@ export const Surah = () => {
   return (
     <>
       <Navigasi />
+      <main className="flex">
+        <div className="card">
+          <h1>Al-Fatihah</h1>
+          <h1>Surah : 1</h1>
+          <h1>Juz : 1</h1>
+          <h1>Madinah</h1>
+        </div>
+        <div className="card">
+          <h1>Al-Fatihah</h1>
+          <h1>Surah : 1</h1>
+          <h1>Juz : 1</h1>
+          <h1>Madinah</h1>
+        </div>
+      </main>
       <table>
         <thead>
           <tr>

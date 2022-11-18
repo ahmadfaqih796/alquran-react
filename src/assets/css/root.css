@@ -1,11 +1,24 @@
 * {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .arab {
   font-family: me_quran;
-	font-size: 4rem;
+  font-size: 4rem;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  background-color: greenyellow;
+  width: 300px;
+  margin: 10px;
+  flex-direction: column;
 }
 
 @font-face {
