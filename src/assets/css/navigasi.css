@@ -5,6 +5,11 @@ nav {
 	justify-content: space-evenly;
 	background-color: aqua;
 }
+nav .logo {
+	display: flex;
+	align-items: center;
+	
+}
 nav ul {
 	display: flex;
 	background-color: red;
