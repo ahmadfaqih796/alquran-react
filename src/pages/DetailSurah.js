@@ -45,27 +45,33 @@ const DetailSurah = () => {
   };
 
   return (
-    <div className="template">
-      <article className="brand">
-        <h1>Al-Quran Al-Faqih</h1>
-        <img className="quran" src={quran} alt={quran} />
-        <main className="pencarian">
-          <input
-            type="text"
-            autoFocus
-            onChange={(e) => {
-              setSearch(e.target.value);
-            }}
-            onKeyPress={handleKeyPress}
-          />
-          <button onClick={FindSurah}>
-            <i className="fa-solid fa-magnifying-glass"></i>
-          </button>
-        </main>
-        <p>{error ? message : ""}</p>
-      </article>
-      {surah && ayats.length >= 1 ? (
-        <>
+    <>
+      {ayats.length === 0 ? (
+        <section className="template loading section-2">
+          <span className="loader loader-double"></span>
+          Loading...
+          {/* <div className="skeleton skeleton-text"></div> */}
+        </section>
+      ) : (
+        <div className="template">
+          <article className="brand">
+            <h1>Al-Quran Al-Faqih</h1>
+            <img className="quran" src={quran} alt={quran} />
+            <main className="pencarian">
+              <input
+                type="text"
+                autoFocus
+                onChange={(e) => {
+                  setSearch(e.target.value);
+                }}
+                onKeyPress={handleKeyPress}
+              />
+              <button onClick={FindSurah}>
+                <i className="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </main>
+            <p>{error ? message : ""}</p>
+          </article>
           <div className="ayat-card">
             <h1 className="judul">{params.surah}</h1>
             <p className="justify">{surah.tafsir.id}</p>
@@ -90,13 +96,9 @@ const DetailSurah = () => {
               </div>
             ))}
           </div>
-        </>
-      ) : (
-        <>
-          <div className="skeleton skeleton-text"></div>
-        </>
+        </div>
       )}
-    </div>
+    </>
   );
 };
 export default DetailSurah;
