@@ -1,15 +1,20 @@
-import "../assets/css/navigasi.css"
+import "../assets/css/navigasi.css";
 export const Navigasi = () => {
   return (
     <>
       <nav>
-				<div className="logo">
-					<h1>hello</h1>
-				</div>
         <ul>
-          <li>Home</li>
-          <li>About</li>
+          <li>
+            <a href="#!">Qur'an</a>
+          </li>
+          <li>
+            <a href="#!">Hadits</a>
+          </li>
         </ul>
+        <main className="pencarian">
+          <input type="text" placeholder="cari surah" />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </main>
       </nav>
     </>
   );
