@@ -71,6 +71,7 @@ const DetailSurah = () => {
             <p className="justify">{surah.tafsir.id}</p>
             <hr />
             <p className="arab center">{surah.preBismillah.text?.arab}</p>
+            <p className="center">{surah.preBismillah.translation?.id}</p>
             {ayats.map((ayat, index) => (
               <div key={index}>
                 <hr />
@@ -78,7 +79,7 @@ const DetailSurah = () => {
                   <h2 className="number">{ayat.number.inSurah}</h2>
                   <section>
                     <p className="arab">{ayat.text.arab}</p>
-                    <p>{ayat.translation.id}</p>
+                    <p className="justify">{ayat.translation.id}</p>
                   </section>
                   {/* <li>
                 <audio controls>
