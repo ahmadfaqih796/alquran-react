@@ -1,7 +1,9 @@
 import "../assets/css/navigasi.css";
+import "../assets/css/sidebar.css";
 export const Navigasi = () => {
   return (
     <>
+      <aside className="sidebar-kiri"></aside>
       <nav>
         <ul>
           <li>
@@ -16,6 +18,7 @@ export const Navigasi = () => {
           <i class="fa-solid fa-magnifying-glass"></i>
         </main>
       </nav>
+      <aside className="sidebar-kanan"></aside>
     </>
   );
 };
