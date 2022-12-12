@@ -1,0 +1,12 @@
+.sidebar-kiri,
+.sidebar-kanan {
+	display: block;
+	height: 100vh;
+	background-color: rebeccapurple;
+}
+.sidebar-kiri{
+	width: 100px;
+}
+.sidebar-kanan {
+	width: 250px;
+}

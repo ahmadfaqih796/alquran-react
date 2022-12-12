@@ -13,6 +13,10 @@
   flex-wrap: wrap;
 }
 
+.tampilan {
+	display: flex;
+}
+
 .card {
   display: flex;
   background-color: greenyellow;
