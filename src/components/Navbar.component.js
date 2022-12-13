@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom";
 import "../assets/css/navigasi.css";
 import "../assets/css/sidebar.css";
 export const Navigasi = () => {
@@ -9,10 +10,10 @@ export const Navigasi = () => {
           <nav>
             <ul>
               <li>
-                <a href="#!">Qur'an</a>
+                <a href="/uwu/messages">Qur'an</a>
               </li>
               <li>
-                <a href="#!">Hadits</a>
+                <a href="/uwu/tasks">Hadits</a>
               </li>
             </ul>
             <main className="pencarian">
@@ -21,6 +22,7 @@ export const Navigasi = () => {
             </main>
           </nav>
           <article className="konten">
+						<Outlet />
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam,
               dignissimos praesentium maxime, consequatur impedit obcaecati vero
