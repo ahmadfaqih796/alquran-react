@@ -8,6 +8,7 @@ export const DetailSurah = () => {
   const [ayats, setAyat] = useState([]);
   const [tafsir, setTafsir] = useState("");
   const params = useParams();
+	console.log(params)
   useEffect(() => {
     GetDetailSurah(params.id).then((response) => {
       setSurah(response.data.data);
