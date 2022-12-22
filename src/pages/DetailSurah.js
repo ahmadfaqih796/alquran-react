@@ -69,6 +69,8 @@ const DetailSurah = () => {
           <div className="ayat-card">
             <h1 className="judul">{params.surah}</h1>
             <p className="justify">{surah.tafsir.id}</p>
+            <hr />
+            <p className="arab center">{surah.preBismillah.text?.arab}</p>
             {ayats.map((ayat, index) => (
               <div key={index}>
                 <hr />
