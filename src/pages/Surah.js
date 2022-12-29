@@ -52,7 +52,7 @@ const Surah = () => {
       ) : (
         <div className="template">
           <article className="brand">
-            <h1>Al-Quran Al-Faqih</h1>
+            <h1>Al-Quran React</h1>
             <img className="quran" src={quran} alt={quran} />
             <main className="pencarian">
               <input

@@ -27,3 +27,8 @@
   width: 100%;
   color: black;
 }
+.ayat-card .terjemahan {
+  word-spacing: 5px;
+  text-align: justify;
+  font-size: 1.2rem;
+}

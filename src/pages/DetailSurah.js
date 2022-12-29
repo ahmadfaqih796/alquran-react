@@ -55,7 +55,7 @@ const DetailSurah = () => {
       ) : (
         <div className="template">
           <article className="brand">
-            <h1>Al-Quran Al-Faqih</h1>
+            <h1>Al-Quran React</h1>
             <img className="quran" src={quran} alt={quran} />
             <main className="pencarian">
               <input
@@ -90,7 +90,7 @@ const DetailSurah = () => {
                   <h2 className="number">{ayat.number.inSurah}</h2>
                   <section>
                     <p className="arab">{ayat.text.arab}</p>
-                    <p className="justify">{ayat.translation.id}</p>
+                    <p className="terjemahan">{ayat.translation.id}</p>
                   </section>
                   {/* <li>
                 <audio controls>
