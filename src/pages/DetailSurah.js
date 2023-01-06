@@ -46,7 +46,7 @@ const DetailSurah = () => {
 
   return (
     <>
-      {ayats.length === 0 ? (
+      {surah && ayats.length === 0 ? (
         <section className="template loading section-2">
           <span className="loader loader-double"></span>
           Loading...
@@ -75,9 +75,14 @@ const DetailSurah = () => {
           <div className="ayat-card">
             <h1 className="judul">{params.surah}</h1>
             <p className="justify">{surah.tafsir.id}</p>
-            <hr />
-            <p className="arab center">{surah.preBismillah.text?.arab}</p>
-            <p className="center">{surah.preBismillah.translation?.id}</p>
+            {surah.preBismillah && (
+              <>
+                <hr />
+                <p className="arab center">{surah.preBismillah.text?.arab}</p>
+                <p className="center">{surah.preBismillah.translation?.id}</p>
+              </>
+            )}
+
             {ayats.map((ayat, index) => (
               <div key={index}>
                 <hr />

@@ -15,8 +15,8 @@
 .loader-double {
   border-radius: 50px;
   border: 6px solid transparent;
-  border-top-color: #fff;
-  border-bottom-color: #fff;
+  border-top-color: black;
+  border-bottom-color: black;
   -webkit-animation: spin 1.5s linear infinite;
   animation: spin 1.5s linear infinite;
 }
@@ -31,8 +31,8 @@
   right: 5px;
   border-radius: 50px;
   border: 6px solid transparent;
-  border-top-color: #fff;
-  border-bottom-color: #fff;
+  border-top-color: black;
+  border-bottom-color: black;
   filter: alpha(opacity=6);
   -khtml-opacity: 0.6;
   -moz-opacity: 0.6;
