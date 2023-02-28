@@ -13,7 +13,6 @@ export const Surah = () => {
   }, []);
   return (
     <>
-      <Navigasi />
       <main className="flex">
         <div className="card">
           <h1>Al-Fatihah</h1>
