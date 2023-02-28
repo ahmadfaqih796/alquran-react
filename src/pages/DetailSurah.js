@@ -1,14 +1,14 @@
-import "../assets/css/root.css"
+import "../assets/css/root.css";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { GetDetailSurah } from "../providers/quran.provider";
 
-export const DetailSurah = () => {
+const DetailSurah = () => {
   const [surah, setSurah] = useState([]);
   const [ayats, setAyat] = useState([]);
   const [tafsir, setTafsir] = useState("");
   const params = useParams();
-	console.log(params)
+  console.log(params);
   useEffect(() => {
     GetDetailSurah(params.id).then((response) => {
       setSurah(response.data.data);
@@ -38,3 +38,4 @@ export const DetailSurah = () => {
     </>
   );
 };
+export default DetailSurah;

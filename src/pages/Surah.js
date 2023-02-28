@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
-import { Navigasi } from "../components/Navbar.component";
 import { GetAllSurah } from "../providers/quran.provider";
 
-export const Surah = () => {
+const Surah = () => {
   const [surah, setSurah] = useState([]);
 
   useEffect(() => {
@@ -13,20 +12,6 @@ export const Surah = () => {
   }, []);
   return (
     <>
-      <main className="flex">
-        <div className="card">
-          <h1>Al-Fatihah</h1>
-          <h1>Surah : 1</h1>
-          <h1>Juz : 1</h1>
-          <h1>Madinah</h1>
-        </div>
-        <div className="card">
-          <h1>Al-Fatihah</h1>
-          <h1>Surah : 1</h1>
-          <h1>Juz : 1</h1>
-          <h1>Madinah</h1>
-        </div>
-      </main>
       <table>
         <thead>
           <tr>
@@ -52,3 +37,4 @@ export const Surah = () => {
     </>
   );
 };
+export default Surah;
