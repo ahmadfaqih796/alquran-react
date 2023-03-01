@@ -11,7 +11,7 @@ const Surah = () => {
     });
   }, []);
   return (
-    <>
+    <div className="template">
       <table>
         <thead>
           <tr>
@@ -34,7 +34,7 @@ const Surah = () => {
           ))}
         </tbody>
       </table>
-    </>
+    </div>
   );
 };
 export default Surah;
