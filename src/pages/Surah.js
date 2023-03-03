@@ -5,6 +5,8 @@ import quran from "../assets/image/quran.png";
 const Surah = () => {
   const [surah, setSurah] = useState([]);
   const [search, setSearch] = useState("");
+  const [error, setError] = useState(false);
+  const [message, setMessage] = useState("");
 
   useEffect(() => {
     GetAllSurah().then((response) => {
@@ -15,18 +17,22 @@ const Surah = () => {
 
   function FindSurah() {
     if (search === "") {
-      alert("Please enter some text to search!");
+      setError(true);
+      setMessage("Silakan masukkan beberapa teks untuk mencari !");
       return;
     }
 
     if (window.find) {
       // Firefox, Google Chrome, Safari
       const found = window.find(search);
+      setError(false);
       if (!found) {
-        alert("The following text was not found:\n" + search);
+        setError(true);
+        setMessage("Teks berikut tidak ditemukan:\n" + search);
       }
     } else {
-      alert("Your browser does not support this example!");
+      setError(true);
+      setMessage("Browser Anda tidak mendukung contoh ini !");
     }
   }
 
@@ -47,7 +53,7 @@ const Surah = () => {
         <div className="template">
           <article className="brand">
             <h1>Al-Quran Al-Faqih</h1>
-            <img className="quran" src={quran} />
+            <img className="quran" src={quran} alt={quran} />
             <main className="pencarian">
               <input
                 type="text"
@@ -59,6 +65,7 @@ const Surah = () => {
               />
               <button onClick={FindSurah}>Cari</button>
             </main>
+            <p>{error ? message : ""}</p>
           </article>
           <main className="surah">
             {surah.map((data, index) => (
