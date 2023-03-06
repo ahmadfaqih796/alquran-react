@@ -19,7 +19,7 @@ const DetailSurah = () => {
   }, [params.id]);
 
   return (
-    <>
+    <div className="template">
       {ayats.length >= 1 ? (
         <>
           <h1>detail</h1>
@@ -42,7 +42,7 @@ const DetailSurah = () => {
       ) : (
         <h1 className="skeleton skeleton-text"></h1>
       )}
-    </>
+    </div>
   );
 };
 export default DetailSurah;
