@@ -5,7 +5,9 @@
 
 .arab {
   font-family: me_quran;
-  font-size: 4rem;
+  font-size: 3rem;
+  direction: rtl;
+  text-align: justify;
 }
 
 .flex {
@@ -32,6 +34,16 @@
   padding: 20px;
   border-radius: 20px;
   box-shadow: 10px 15px 15px -5px rgba(155, 149, 149, 0.76);
+}
+
+.ayat-card {
+  display: flex;
+  background-color: white;
+  padding: 20px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 1000px;
 }
 
 @font-face {
