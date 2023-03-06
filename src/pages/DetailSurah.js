@@ -1,4 +1,3 @@
-import "../assets/css/root.css";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { GetDetailSurah } from "../providers/quran.provider";
@@ -6,13 +5,11 @@ import { GetDetailSurah } from "../providers/quran.provider";
 const DetailSurah = () => {
   const [surah, setSurah] = useState([]);
   const [ayats, setAyat] = useState([]);
-  const [tafsir, setTafsir] = useState("");
   const params = useParams();
-  console.log("xxxxxx",tafsir);
+  console.log("xxxxxx", surah);
   useEffect(() => {
     GetDetailSurah(params.id).then((response) => {
       setSurah(response.data.data);
-      setTafsir(response.data.data.tafsir.id);
       setAyat(response.data.data.verses);
       console.log(response.data.data);
     });
@@ -20,12 +17,12 @@ const DetailSurah = () => {
 
   return (
     <div className="template">
-      {ayats.length >= 1 ? (
+      {surah && ayats.length >= 1 ? (
         <>
           <h1>detail</h1>
           <h1>{surah.number}</h1>
           <h1>{surah.numberOfVerses}</h1>
-          <p>{tafsir}</p>
+          <p>{surah.tafsir.id}</p>
           {ayats.map((ayat, index) => (
             <ul key={index}>
               <li>{ayat.number.inSurah}</li>
@@ -40,7 +37,9 @@ const DetailSurah = () => {
           ))}
         </>
       ) : (
-        <h1 className="skeleton skeleton-text"></h1>
+        <>
+          <div className="skeleton skeleton-text"></div>
+        </>
       )}
     </div>
   );
