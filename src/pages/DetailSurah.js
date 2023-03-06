@@ -11,7 +11,6 @@ const DetailSurah = () => {
     GetDetailSurah(params.id).then((response) => {
       setSurah(response.data.data);
       setAyat(response.data.data.verses);
-      console.log(response.data.data);
     });
   }, [params.id]);
 
