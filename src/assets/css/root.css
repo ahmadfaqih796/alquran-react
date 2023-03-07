@@ -40,10 +40,15 @@
   display: flex;
   background-color: white;
   padding: 20px;
+  border: 3px solid black;
+  border-radius: 20px;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-around;
   width: 1000px;
+}
+.ayat-card ul li {
+  list-style: none;
 }
 
 @font-face {
