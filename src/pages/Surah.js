@@ -63,7 +63,9 @@ const Surah = () => {
                 }}
                 onKeyPress={handleKeyPress}
               />
-              <button onClick={FindSurah}>Cari</button>
+              <button onClick={FindSurah}>
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
             </main>
             <p>{error ? message : ""}</p>
           </article>
