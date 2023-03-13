@@ -66,11 +66,11 @@ const DetailSurah = () => {
       </article>
       {surah && ayats.length >= 1 ? (
         <>
-          <h1>detail</h1>
-          <h1>{surah.number}</h1>
-          <h1>{surah.numberOfVerses}</h1>
-          <p>{surah.tafsir.id}</p>
           <div className="ayat-card">
+            <h1>{params.surah}</h1>
+            <h1>{surah.number}</h1>
+            <h1>{surah.numberOfVerses}</h1>
+            <p>{surah.tafsir.id}</p>
             {ayats.map((ayat, index) => (
               <div key={index}>
                 <hr />
