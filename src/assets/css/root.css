@@ -10,6 +10,7 @@ body {
 }
 
 .template {
+  padding: 20px 0;
   background-image: url("../image/template.jpg");
   background-position: center;
   background-size: cover;
@@ -88,6 +89,15 @@ hr {
   z-index: -1;
   content: "";
 }
+
+/* align teks */
+.justify {
+  text-align: justify;
+}
+.center {
+  text-align: center;
+}
+
 @font-face {
   font-family: me_quran;
   src: url("../font/me_quran.ttf");

@@ -10,7 +10,7 @@ const DetailSurah = () => {
   const [error, setError] = useState(false);
   const [message, setMessage] = useState("");
   const params = useParams();
-  console.log("xxxxxx", surah);
+  console.log("detail", surah);
   useEffect(() => {
     GetDetailSurah(params.id).then((response) => {
       setSurah(response.data.data);
@@ -68,15 +68,7 @@ const DetailSurah = () => {
         <>
           <div className="ayat-card">
             <h1 className="judul">{params.surah}</h1>
-            <section>
-              <div className="detail">
-                <h1>{surah.number}</h1>
-                <h1>{surah.numberOfVerses}</h1>
-              </div>
-              <article>
-                <p>{surah.tafsir.id}</p>
-              </article>
-            </section>
+            <p className="justify">{surah.tafsir.id}</p>
             {ayats.map((ayat, index) => (
               <div key={index}>
                 <hr />
