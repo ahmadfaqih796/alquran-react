@@ -67,10 +67,16 @@ const DetailSurah = () => {
       {surah && ayats.length >= 1 ? (
         <>
           <div className="ayat-card">
-            <h1>{params.surah}</h1>
-            <h1>{surah.number}</h1>
-            <h1>{surah.numberOfVerses}</h1>
-            <p>{surah.tafsir.id}</p>
+            <h1 className="judul">{params.surah}</h1>
+            <section>
+              <div className="detail">
+                <h1>{surah.number}</h1>
+                <h1>{surah.numberOfVerses}</h1>
+              </div>
+              <article>
+                <p>{surah.tafsir.id}</p>
+              </article>
+            </section>
             {ayats.map((ayat, index) => (
               <div key={index}>
                 <hr />
